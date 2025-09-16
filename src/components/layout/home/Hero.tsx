@@ -25,7 +25,7 @@ export const Hero: React.FC = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" >
+              <Button size="lg" className='bg-emerald-600 hover:bg-emerald-600/70 py-6'>
                 <ArrowRight />
                 Start Free Analysis
               </Button>
