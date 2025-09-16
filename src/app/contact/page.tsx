@@ -22,7 +22,7 @@ export default function Contact() {
       <section className="bg-[hsl(150_40%_22%)] text-white">
         <div className="mx-auto max-w-5xl px-4 py-16">
           <h1 className="text-4xl font-extrabold tracking-tight">Contact</h1>
-          <p className="mt-3 max-w-2xl text-white/80">We'd love to hear from you. Send us a message.</p>
+          <p className="mt-3 max-w-2xl text-white/80">We&apos;d love to hear from you. Send us a message.</p>
         </div>
       </section>
       <section className="mx-auto max-w-5xl px-4 py-12 space-y-10">
