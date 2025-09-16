@@ -9,6 +9,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { ACCOUNT_TYPE_LABELS, AccountType, saveUser } from "@/lib/account";
 import Layout from "@/components/layout/auth/Layout";
+import { AccountPayload, Field } from "@/types";
 
 function isAccountType(v: string | undefined): v is AccountType {
   return (
@@ -78,7 +79,7 @@ function DynamicSignupForm({
 }) {
   const [loading, setLoading] = useState(false);
 
-  const fields = useMemo(() => {
+  const fields: readonly Field[] = useMemo(() => {
     if (type === "individual") {
       return [
         { name: "fullName", label: "Full name", type: "text", required: true },
@@ -98,7 +99,7 @@ function DynamicSignupForm({
         { name: "website", label: "Website (optional)", type: "url" },
       ] as const;
     }
-    if (type === "tax_consultant") {
+    if (type === "consultant") {
       return [
         { name: "firmName", label: "Firm name", type: "text", required: true },
         { name: "email", label: "Email", type: "email", required: true },
@@ -120,13 +121,17 @@ function DynamicSignupForm({
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = new FormData(e.currentTarget);
-    const data: Record<string, any> = {};
+    const data: Record<string, string | File> = {};
     for (const [k, v] of form.entries()) data[k] = v;
     setLoading(true);
     setTimeout(() => {
-      const payload = { type, ...data } as any;
-      if (payload.yearsExperience) {
-        payload.yearsExperience = Number(payload.yearsExperience);
+      let payload: AccountPayload = { type, ...data } as AccountPayload;
+      // Convert yearsExperience to number, only for consultant accounts
+      if (payload.type === "consultant" && "yearsExperience" in payload) {
+        payload = {
+          ...payload,
+          yearsExperience: Number(data.yearsExperience),
+        };
       }
       saveUser(payload);
       setLoading(false);
@@ -144,7 +149,7 @@ function DynamicSignupForm({
               id={f.name}
               name={f.name}
               type={f.type}
-              required={Boolean((f as any).required)}
+              required={Boolean(f.required)}
             />
           </div>
         ))}

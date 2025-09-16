@@ -1,9 +1,9 @@
-export type AccountType = "individual" | "business" | "tax_consultant" | "regulator";
+export type AccountType = "individual" | "business" | "consultant" | "regulator";
 
 export const ACCOUNT_TYPE_LABELS: Record<AccountType, string> = {
   individual: "Individual",
   business: "Business",
-  tax_consultant: "Tax Consultant",
+  consultant: "consultant",
   regulator: "Regulator",
 };
 
@@ -26,7 +26,7 @@ export type SignupPayload =
       website?: string;
     }
   | {
-      type: "tax_consultant";
+      type: "consultant";
       firmName: string;
       email: string;
       password: string;
