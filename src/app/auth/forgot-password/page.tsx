@@ -26,7 +26,7 @@ export default function ForgotPassword() {
             <CardContent>
               <form className="grid gap-4" onSubmit={onSubmit}>
                 <Input type="email" placeholder="Email" value={email} onChange={(e)=>setEmail(e.target.value)} required />
-                <Button type="submit" className="w-full">Send Reset Link</Button>
+                <Button type="submit" className="w-full bg-emerald-600 hover:bg-emerald-600/70 py-6">Send Reset Link</Button>
               </form>
             </CardContent>
           </Card>

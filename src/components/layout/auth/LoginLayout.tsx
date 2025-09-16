@@ -51,7 +51,7 @@ export default function LoginLayout() {
                   onChange={(e) => setPassword(e.target.value)}
                   required
                 />
-                <Button type="submit" className="w-full">
+                <Button type="submit" className="w-full bg-emerald-600 hover:bg-emerald-600/70 py-6">
                   Login
                 </Button>
                 <div className="flex justify-between text-sm text-muted-foreground">

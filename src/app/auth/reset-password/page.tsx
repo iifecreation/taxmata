@@ -32,7 +32,7 @@ export default function ResetPassword() {
               <form className="grid gap-4" onSubmit={onSubmit}>
                 <Input type="password" placeholder="New password" value={password} onChange={(e)=>setPassword(e.target.value)} required />
                 <Input type="password" placeholder="Confirm password" value={confirm} onChange={(e)=>setConfirm(e.target.value)} required />
-                <Button type="submit" className="w-full">Update Password</Button>
+                <Button type="submit" className="w-full bg-emerald-600 hover:bg-emerald-600/70 py-6">Update Password</Button>
               </form>
             </CardContent>
           </Card>
