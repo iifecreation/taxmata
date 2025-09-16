@@ -1,5 +1,6 @@
 "use client";
 
+import Layout from "@/components/layout/auth/Layout";
 import TopNav from "@/components/layout/TopNav";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -17,25 +18,19 @@ export default function ForgotPassword() {
   return (
     <div className="min-h-screen bg-background">
       <TopNav />
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid min-h-[80vh] items-stretch gap-10 py-10 md:grid-cols-2">
-        <div className="flex flex-col justify-center">
-          <Card className="max-w-xl">
+      <Layout imageUrl="https://www.vmcdn.ca/f/files/coastreporter/images/stock-images/young-female-reading-her-bill-papers-and-using-calculator.jpg;w=1200;h=800;mode=crop">
+          <Card className="max-full shadow-none border-none">
             <CardHeader>
               <CardTitle>Forgot Password</CardTitle>
             </CardHeader>
             <CardContent>
               <form className="grid gap-4" onSubmit={onSubmit}>
                 <Input type="email" placeholder="Email" value={email} onChange={(e)=>setEmail(e.target.value)} required />
-                <Button type="submit" className="w-full bg-emerald-600 hover:bg-emerald-600/70 py-6">Send Reset Link</Button>
+                <Button type="submit" className="w-full bg-[hsl(150_40%_22%)] hover:bg-[hsl(150_40%_22%)]/90 py-6">Send Reset Link</Button>
               </form>
             </CardContent>
           </Card>
-        </div>
-        <div className="relative hidden overflow-hidden rounded-3xl border md:block">
-          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1543932923-1cc9363a5798?q=80&w=1974&auto=format&fit=crop')] bg-cover bg-center" />
-          <div className="absolute inset-0 bg-gradient-to-br from-black/20 via-black/10 to-transparent" />
-        </div>
-      </section>
+      </Layout>
     </div>
   );
 }

@@ -106,7 +106,7 @@ export default function SignUp() {
                     required
                   />
                 ))}
-                <Button type="submit" className="w-full bg-emerald-600 hover:bg-emerald-600/70 py-6">
+                <Button type="submit" className="w-full bg-[hsl(150_40%_22%)] hover:bg-[hsl(150_40%_22%)]/90 py-6">
                   Create Account
                 </Button>
                 <div className="text-center text-sm text-muted-foreground">

@@ -17,7 +17,7 @@ const SERVICES_IMG = "https://cdn.builder.io/api/v1/image/assets%2F6cfe657b78d64
 
 export default function Index() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-[hsl(150_35%_95%)] text-foreground">
+    <div className="min-h-screen bg-gradient-to-b from-white to-[hsl(150_35%_95%)] text-foreground w-full">
       <TopNav />
       <main>
         <Hero />

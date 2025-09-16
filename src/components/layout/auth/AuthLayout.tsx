@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import TopNav from "@/components/layout/TopNav";
 import { Button } from "@/components/ui/button";
+import Layout from "./Layout";
 
 const ROLES = [
   {
@@ -39,8 +40,8 @@ export default function AuthLayout() {
 
   return (
     <div className="min-h-screen bg-background">
-      <TopNav />
-      <section className="container grid min-h-[80vh] items-stretch gap-10 py-10 md:grid-cols-2 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <TopNav />
+        <Layout imageUrl="https://www.vmcdn.ca/f/files/coastreporter/images/stock-images/young-female-reading-her-bill-papers-and-using-calculator.jpg;w=1200;h=800;mode=crop">
         <div className="flex flex-col justify-center">
           <h2 className="mb-2 text-3xl font-extrabold">Sign up Options</h2>
           <p className="mb-6 text-muted-foreground">
@@ -66,11 +67,7 @@ export default function AuthLayout() {
             </div>
           </div>
         </div>
-        <div className="relative hidden overflow-hidden rounded-3xl border md:block">
-          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1543932923-1cc9363a5798?q=80&w=1974&auto=format&fit=crop')] bg-cover bg-center" />
-          <div className="absolute inset-0 bg-gradient-to-br from-black/20 via-black/10 to-transparent" />
-        </div>
-      </section>
+        </Layout>
     </div>
   );
 }
