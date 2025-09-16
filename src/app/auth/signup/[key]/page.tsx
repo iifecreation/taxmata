@@ -150,7 +150,7 @@ function DynamicSignupForm({
         ))}
       </div>
       <div className="flex items-center justify-end">
-        <Button type="submit" disabled={loading}>
+        <Button type="submit" disabled={loading} className="w-full bg-[hsl(150_40%_22%)] hover:bg-[hsl(150_40%_22%)]/90 py-6">
           {loading
             ? "Creating..."
             : `Create ${ACCOUNT_TYPE_LABELS[type]} account`}

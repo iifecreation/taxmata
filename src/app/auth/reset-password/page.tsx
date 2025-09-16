@@ -26,7 +26,12 @@ export default function ResetPassword() {
       <Layout imageUrl="https://www.vmcdn.ca/f/files/coastreporter/images/stock-images/young-female-reading-her-bill-papers-and-using-calculator.jpg;w=1200;h=800;mode=crop">
         <Card className="max-full shadow-none border-none">
           <CardHeader>
-            <CardTitle>Reset Password</CardTitle>
+            <CardTitle>
+              <div className="mb-8">
+                <h1 className="text-2xl font-bold tracking-tight">Reset password</h1>
+                <p className="mt-1 text-sm text-muted-foreground">Choose a new secure password</p>
+              </div>
+            </CardTitle>
           </CardHeader>
           <CardContent>
             <form className="grid gap-4" onSubmit={onSubmit}>
