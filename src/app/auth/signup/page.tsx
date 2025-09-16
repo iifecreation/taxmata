@@ -99,9 +99,9 @@ export default function SignUp() {
                     key={String(f.key)}
                     type={f.type ?? "text"}
                     placeholder={f.label}
-                    value={(form as any)[f.key] ?? ""}
+                    value={form[f.key] as string ?? ""}
                     onChange={(e) =>
-                      setForm({ ...form, [f.key]: e.target.value } as any)
+                      setForm({ ...form, [f.key]: e.target.value } as SignUpPayload)
                     }
                     required
                   />

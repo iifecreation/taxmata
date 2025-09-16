@@ -2,6 +2,7 @@
 
 import React from "react";
 import { Card } from "@/components/ui/card";
+import Image from "next/image";
 
 const SERVICES = [
   { title: "Tax Preparation", desc: "PIT planning & filing" },
@@ -44,7 +45,7 @@ export default function ServicesMosaic({ img }: { img?: string }) {
           <div className="rounded-2xl overflow-hidden border mb-6">
             {img ? (
               // eslint-disable-next-line @next/next/no-img-element
-              <img src={img} alt="services" className="w-full object-cover" />
+              <Image src={img} alt="services" className="w-full object-cover" />
             ) : (
               <div className="h-56 bg-muted/20" />
             )}
@@ -52,7 +53,7 @@ export default function ServicesMosaic({ img }: { img?: string }) {
 
           <div className="rounded-2xl border p-8">
             <h3 className="text-2xl font-bold">Get in Touch</h3>
-            <p className="mt-2 text-sm text-muted-foreground">Have questions or need a demo? Send us a message and we’ll get back to you.</p>
+            <p className="mt-2 text-sm text-muted-foreground">Have questions or need a demo? Send us a message and we&rsquo;ll get back to you.</p>
             <form className="mt-6 grid gap-3" onSubmit={(e) => { e.preventDefault(); alert('Thanks — we will contact you shortly'); }}>
               <div className="grid gap-3 sm:grid-cols-2">
                 <input name="first" placeholder="First name" className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base placeholder:text-muted-foreground" />

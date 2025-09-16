@@ -3,6 +3,7 @@
 import React from 'react';
 import { ArrowRight, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import Image from 'next/image';
 
 
 export const Hero: React.FC = () => {
@@ -48,7 +49,7 @@ export const Hero: React.FC = () => {
           {/* Image */}
           <div className="relative">
             <div className="relative z-10">
-              <img
+              <Image
                 src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800"
                 alt="Professional tax consultants"
                 className="rounded-2xl shadow-2xl"

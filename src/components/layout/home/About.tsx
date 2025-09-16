@@ -3,6 +3,7 @@
 import React from 'react';
 import { ArrowRight, Users, Award, Clock } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import Image from 'next/image';
 
 export const About: React.FC = () => {
   const stats = [
@@ -18,7 +19,7 @@ export const About: React.FC = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Image */}
           <div className="relative">
-            <img
+            <Image
               src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=800"
               alt="Tax professionals working"
               className="rounded-2xl shadow-xl"

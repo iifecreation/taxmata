@@ -11,6 +11,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
+import Image from 'next/image';
 
 export const Testimonials: React.FC = () => {
   const testimonials = [
@@ -45,7 +46,7 @@ export const Testimonials: React.FC = () => {
             We have achieved the property taxes on more than 10,000 properties.
           </h2>
           <p className="text-xl text-emerald-100 max-w-3xl mx-auto">
-            Don't just take our word for it. Here's what our clients have to say about our services.
+            Don&apos;t just take our word for it. Here&apos;s what our clients have to say about our services.
           </p>
         </div>
 
@@ -62,11 +63,11 @@ export const Testimonials: React.FC = () => {
                 <Quote className="w-8 h-8 text-emerald-400 mb-4" />
                 
                 <p className="text-white mb-6 leading-relaxed">
-                  "{testimonial.content}"
+                  &quot;{testimonial.content}&quot;
                 </p>
                 
                 <div className="flex items-center">
-                  <img
+                  <Image
                     src={testimonial.image}
                     alt={testimonial.name}
                     className="w-12 h-12 rounded-full mr-4"

@@ -12,6 +12,7 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 import { Button } from '@/components/ui/button';
+import Image from 'next/image';
 
 export const Blog: React.FC = () => {
   const articles = [
@@ -54,7 +55,7 @@ export const Blog: React.FC = () => {
           {articles.map((article, index) => (
             <Card key={index}>
               <div className="aspect-w-16 aspect-h-9">
-                <img
+                <Image
                   src={article.image}
                   alt={article.title}
                   className="w-full h-48 object-cover rounded-t-2xl"
