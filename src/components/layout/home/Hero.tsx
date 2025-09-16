@@ -53,6 +53,8 @@ export const Hero: React.FC = () => {
                 src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800"
                 alt="Professional tax consultants"
                 className="rounded-2xl shadow-2xl"
+                width={800}
+                height={800}
               />
             </div>
             <div className="absolute -top-4 -right-4 w-full h-full bg-emerald-100 rounded-2xl -z-10"></div>

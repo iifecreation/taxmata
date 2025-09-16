@@ -23,6 +23,8 @@ export const About: React.FC = () => {
               src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=800"
               alt="Tax professionals working"
               className="rounded-2xl shadow-xl"
+              width={800}
+              height={800}
             />
             <div className="absolute -bottom-6 -right-6 bg-emerald-600 text-white p-6 rounded-xl shadow-lg">
               <div className="flex items-center space-x-3">

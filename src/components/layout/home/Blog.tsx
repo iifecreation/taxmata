@@ -59,6 +59,8 @@ export const Blog: React.FC = () => {
                   src={article.image}
                   alt={article.title}
                   className="w-full h-48 object-cover rounded-t-2xl"
+                  width={400}
+                  height={400}
                 />
               </div>
               <CardContent>

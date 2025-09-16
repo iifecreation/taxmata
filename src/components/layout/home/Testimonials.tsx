@@ -71,6 +71,8 @@ export const Testimonials: React.FC = () => {
                     src={testimonial.image}
                     alt={testimonial.name}
                     className="w-12 h-12 rounded-full mr-4"
+                    width={800}
+                    height={800}
                   />
                   <div>
                     <div className="font-semibold text-white">{testimonial.name}</div>

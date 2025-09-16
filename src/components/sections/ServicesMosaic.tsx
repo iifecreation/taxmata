@@ -45,7 +45,7 @@ export default function ServicesMosaic({ img }: { img?: string }) {
           <div className="rounded-2xl overflow-hidden border mb-6">
             {img ? (
               // eslint-disable-next-line @next/next/no-img-element
-              <Image src={img} alt="services" className="w-full object-cover" />
+              <Image src={img} alt="services" className="w-full object-cover" width={600} height={600} />
             ) : (
               <div className="h-56 bg-muted/20" />
             )}
