@@ -6,7 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { useAuth } from "@/hooks/useAuth";
 import { Role, SignUpPayload } from "@/types";
-import { FormEvent, useMemo, useState } from "react";
+import { FormEvent, useState } from "react";
 import { useRouter, useParams } from "next/navigation";
 import Link from "next/link";
 
@@ -47,7 +47,7 @@ export default function SignUp() {
     password: "",
   });
 
-  const fields = useMemo(() => roleFields[role], [role]);
+  const fields = roleFields[role];
 
   const onSubmit = async (e: FormEvent) => {
     e.preventDefault();
